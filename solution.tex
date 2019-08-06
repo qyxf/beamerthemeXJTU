@@ -1,56 +1,57 @@
-% multiple1902 <multiple1902@gmail.com>
 % solution.tex
-% Copyright 2011, multiple1902(Weisi Dai)
-% https://bitbucket.org/multiple1902/beamerthemexjtu
+%
+% Copyright (C)
+%     2011 -- 2018, multiple1902 (Weisi Dai) <multiple1902@gmail.com>
+%     2019 -- present, xjtu-blackmsith <yjr134@163.com>
+% ----------------------------------------------------------------------
 %
 % This work may be distributed and/or modified under the
-% conditions of the LaTeX Project Public License, either version 1.3
-% of this license or (at your option) any later version.
-% The latest version of this license is in
-%   http://www.latex-project.org/lppl.txt
-% and version 1.3 or later is part of all distributions of LaTeX
-% version 2005/12/01 or later.
+% conditions of the LaTeX Project Public License, either
+% version 1.3c of this license or (at your option) any later
+% version. This version of this license is in
+%    http://www.latex-project.org/lppl/lppl-1-3c.txt
+% and the latest version of this license is in
+%    http://www.latex-project.org/lppl.txt
+% and version 1.3 or later is part of all distributions of
+% LaTeX version 2005/12/01 or later.
 %
 % This work has the LPPL maintenance status `maintained'.
 % 
-% The Current Maintainer of this work is Weisi Dai.
+% The Current Maintainer of this work is xjtu-blacksmith.
 %
+% ----------------------------------------------------------------------
+%
+
 \documentclass{beamer}
+\usepackage{ctex}
+\setCJKmainfont{思源宋体} % 设置缺省中文字体
+\usepackage{fourier}     % 配置西文与数学字体
 
 \hypersetup{pdfcreator=TeX,
-%pdfpagemode = FullScreen,
+pdfpagemode = FullScreen,
 }
-
-\usepackage{fontspec,xltxtra,xunicode}
-\usepackage[slantfont,boldfont]{xeCJK}
-%\usepackage[slantfont]{xeCJK}
-\setCJKmainfont[BoldFont=王漢宗特圓體繁]{王漢宗細圓體繁} % 设置缺省中文字体
 
 \mode<presentation>
 {
   \usetheme{XJTU}
   \useinnertheme{rounded}
-  %\usefonttheme{serif}
+  \usefonttheme{serif}
 }
 
+\title[演讲标题]
+{我能吞下玻璃而不伤身体}
 
-\usepackage[english]{babel}
-\usepackage[utf8]{inputenc}
+\subtitle{演讲副标题} % (optional)
 
-\title[演示短標題]
-{我能吞下玻璃而不傷身體喲}
-
-%\subtitle{演講副標題} % (optional)
-
-\author[multiple1902]
-{張三} % {F.~Author\inst{1} \and S.~Another\inst{2}}
+\author[zhangsan123]
+{张三} % {F.~Author\inst{1} \and S.~Another\inst{2}}
 
 \institute[Xi'an Jiaotong University] % (optional, but mostly needed)
 {
   %\inst{1}%
   %School of Electronic and Information Engineering\\
   %Xi'an Jiaotong University\\
-  西安交通大學
+  西安交通大学
   %\and
   %\inst{2}%
   %Department of Theoretical Philosophy\\
@@ -58,16 +59,13 @@
 }
 
 \date[Short Occasion] % (optional)
-{世界吹牛大會 '11}
+{世界吹牛大会 '11}
 
-\subject{Subject} % meta info
-
-\pgfdeclareimage[height=0.5cm]{university-logo}{inc/XJTU.eps}
-\logo{\pgfuseimage{university-logo}}
+\subject{主题} % meta info
 
 \AtBeginSubsection[]
 {
-  \begin{frame}<beamer>{提綱}
+  \begin{frame}<beamer>{目录}
     \tableofcontents[currentsection,currentsubsection]
   \end{frame}
 }
@@ -81,27 +79,27 @@
   \titlepage
 \end{frame}
 
-%\begin{frame}{提綱}
-%  \tableofcontents % [pausesections]
-%\end{frame}
+\begin{frame}{目录}
+  \tableofcontents % [pausesections]
+\end{frame}
 
-\begin{frame}{測試block環境}{副標題}
-    \begin{block}{BLOCK環境}
+\begin{frame}{测试block环境}{副标题}
+    \begin{block}{Block环境}
         A quick brown fox jumps over the lazy dog.
     \end{block} \pause
 
-    \begin{exampleblock}{EXAMPLEBLOCK環境}
+    \begin{exampleblock}{Exampleblock环境}
         A quick brown fox jumps over the lazy dog.
     \end{exampleblock} \pause
 
-    \begin{alertblock}{ALERTBLOCK環境}
+    \begin{alertblock}{Alertblock环境}
         A quick brown fox jumps over the lazy dog.
     \end{alertblock} 
 \end{frame}
 
-\begin{frame}{校訓}
+\begin{frame}{校训}
 
-    \begin{block}{西安交通大學校訓}
+    \begin{block}{西安交通大学校训}
         \centering \Huge
         精勤求學
         \\ \pause
