@@ -51,7 +51,7 @@
 \setbeamercolor*{block body example}{bg=鱼肚白,fg=黑色}
 \setbeamercolor*{block title alerted}{bg=鹅黄,fg=大红}
 \setbeamercolor*{block body alerted}{bg=鸭黄,fg=酡红}
-\setbeamercolor{normal text}{fg=黑色}
+\setbeamercolor*{normal text}{fg=黑色,bg=铅白}
 \setbeamercolor{example text}{fg=茜色}
 \setbeamercolor{section in head/foot}{fg=鸭黄}
 
@@ -60,6 +60,9 @@
 \setbeamerfont{frametitle}{size=\Large}
 
 \usebackgroundtemplate{\pgfuseimage{background}}
+
+\setbeamertemplate{section in toc}[circle]
+\setbeamertemplate{subsection in toc}[square]
 
 \setbeamertemplate{headline}
 {
@@ -81,7 +84,7 @@
 
 \setbeamertemplate{footline}
 {
-  \linethickness{0.25pt}
+  \linethickness{0pt}
   \framelatex{
   \begin{beamercolorbox}[leftskip=.3cm,wd=\paperwidth,ht=0.28\beamer@headheight,sep=0.1cm]{Location bar}
     \usebeamerfont{section in head/foot}%
