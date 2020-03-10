@@ -22,8 +22,7 @@
 % ----------------------------------------------------------------------
 %
 
-\documentclass{beamer}
-\usepackage{ctex}
+\documentclass{ctexbeamer}
 
 \hypersetup{pdfcreator=TeX,
 pdfpagemode = FullScreen,
@@ -77,6 +76,9 @@ pdfpagemode = FullScreen,
   \tableofcontents % [pausesections]
 \end{frame}
 
+\section{测试内容}
+\subsection{测试列表}
+
 \begin{frame}{测试列表}
   \begin{enumerate}
     \item 道生一；
@@ -93,6 +95,8 @@ pdfpagemode = FullScreen,
   \end{itemize}
 \end{frame}
 
+\subsection{测试块环境}
+
 \begin{frame}{测试block环境}{副标题}
     \begin{block}{Block环境}
         A quick brown fox jumps over the lazy dog.
@@ -107,6 +111,8 @@ pdfpagemode = FullScreen,
     \end{alertblock} 
 \end{frame}
 
+\subsection{块中嵌套列表}
+
 \begin{frame}{列表 in block}
   \begin{exampleblock}{List in block}
     \begin{itemize}
@@ -117,16 +123,15 @@ pdfpagemode = FullScreen,
   \end{exampleblock}
 \end{frame}
 
+\section{校训}
+
 \begin{frame}{校训}
 
     \begin{block}{西安交通大学校训}
-        \centering \Huge
-        精勤求學
-        \\ \pause
-        敦篤勵志
-        \\ \pause
-        果毅力行
-        \\ \pause
+        \centering\Huge
+        精勤求學\\ \pause
+        敦篤勵志\\ \pause
+        果毅力行\\ \pause
         忠恕任事
     \end{block}
 
