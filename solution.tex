@@ -24,8 +24,6 @@
 
 \documentclass{beamer}
 \usepackage{ctex}
-\setCJKmainfont{思源宋体} % 设置缺省中文字体
-\usepackage{fourier}     % 配置西文与数学字体
 
 \hypersetup{pdfcreator=TeX,
 pdfpagemode = FullScreen,
@@ -34,17 +32,13 @@ pdfpagemode = FullScreen,
 \mode<presentation>
 {
   \usetheme{XJTU}
-  \useinnertheme{rounded}
-  \usefonttheme{serif}
 }
 
-\title[演讲标题]
-{我能吞下玻璃而不伤身体}
+\title{我能吞下玻璃而不伤身体}
 
 \subtitle{演讲副标题} % (optional)
 
-\author[zhangsan123]
-{张三} % {F.~Author\inst{1} \and S.~Another\inst{2}}
+\author{张三} % {F.~Author\inst{1} \and S.~Another\inst{2}}
 
 \institute[Xi'an Jiaotong University] % (optional, but mostly needed)
 {
@@ -83,6 +77,22 @@ pdfpagemode = FullScreen,
   \tableofcontents % [pausesections]
 \end{frame}
 
+\begin{frame}{测试列表}
+  \begin{enumerate}
+    \item 道生一；
+    \item 一生二；
+    \item 二生三；
+    \item 三生万物。
+  \end{enumerate}
+
+  \begin{itemize}
+    \item 精勤求学；
+    \item 敦笃励志；
+    \item 果毅力行；
+    \item 忠恕任事。
+  \end{itemize}
+\end{frame}
+
 \begin{frame}{测试block环境}{副标题}
     \begin{block}{Block环境}
         A quick brown fox jumps over the lazy dog.
@@ -95,6 +105,16 @@ pdfpagemode = FullScreen,
     \begin{alertblock}{Alertblock环境}
         A quick brown fox jumps over the lazy dog.
     \end{alertblock} 
+\end{frame}
+
+\begin{frame}{列表 in block}
+  \begin{exampleblock}{List in block}
+    \begin{itemize}
+      \item 天苍苍
+      \item 野茫茫
+      \item 风吹草低见牛羊
+    \end{itemize}
+  \end{exampleblock}
 \end{frame}
 
 \begin{frame}{校训}
