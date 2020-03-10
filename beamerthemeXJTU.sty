@@ -24,49 +24,42 @@
 
 \ProvidesPackage{beamerthemeXJTU}
 
+\RequirePackage{cncolours}
+
 \usetheme{Rochester}
+\useinnertheme{circles}
+\usecolortheme[named=酡红]{structure}
 
 \RequirePackage{pgf}
 \pgfdeclareimage[width=\paperwidth,height=.13\paperwidth]{XJTU-header}{inc/XJTU-header}
+\pgfdeclareimage[width=\paperwidth,height=\paperheight]{background}{inc/background}
 
-\setbeamertemplate{blocks}[rounded][shadow=true]
 \setbeamertemplate{navigation symbols}{}
 
 \setbeamercovered{transparent}
 
 \beamer@headheight=.13\paperwidth
 
-\definecolor{XJTUdarkred}{HTML}{C8161E}     % 标准红
-\definecolor{XJTUlightgray}{HTML}{DCDCDD}   % 标准灰
-\definecolor{XJTUblue}{HTML}{004E97}        % 标准蓝
-\definecolor{XJTUyellow}{HTML}{FFFF66}      % 安全色之一
-
-\definecolor{XJTUblocktitlebg}{HTML}{003B90}        % 辅助蓝
-\definecolor{XJTUexampleblocktitlebg}{HTML}{784B2A} % 辅助棕
-\definecolor{XJTUalertblocktitlebg}{HTML}{BC102E}   % 辅助红
-
 \setbeamerfont*{title}{series=\bfseries,size=\Huge}
-\setbeamercolor*{title}{fg=XJTUyellow,bg=XJTUdarkred}
-\setbeamercolor*{Title bar}{fg=XJTUyellow}
-\setbeamercolor*{Location bar}{fg=XJTUdarkred,bg=XJTUlightgray}
+\setbeamercolor*{title}{fg=鸭黄,bg=酡红}
+\setbeamercolor*{Title bar}{fg=鸭黄,bg=酡红}
+\setbeamercolor*{Location bar}{fg=鸭黄,bg=酡红}
 \setbeamercolor*{frametitle}{parent=Title bar}
-\setbeamercolor*{block title}{bg=XJTUblue,fg=white}
-\setbeamercolor*{block body}{bg=XJTUlightgray,fg=black}
-\setbeamercolor*{normal text}{bg=white,fg=black}
+\setbeamercolor*{block title}{bg=酡红,fg=象牙白}
+\setbeamercolor*{block body}{bg=鱼肚白,fg=黑色}
+\setbeamercolor*{block title example}{bg=粉红,fg=乌黑}
+\setbeamercolor*{block body example}{bg=鱼肚白,fg=黑色}
+\setbeamercolor*{block title alerted}{bg=鹅黄,fg=大红}
+\setbeamercolor*{block body alerted}{bg=鸭黄,fg=酡红}
+\setbeamercolor{normal text}{fg=黑色}
+\setbeamercolor{example text}{fg=茜色}
+\setbeamercolor{section in head/foot}{fg=鸭黄}
 
-\setbeamercolor{block title}{bg=XJTUblocktitlebg}
 \setbeamerfont{block title}{series=\bfseries}
-\setbeamercolor{block title example}{bg=XJTUexampleblocktitlebg}
-\setbeamercolor{block title alerted}{bg=XJTUalertblocktitlebg}
-
-\usecolortheme[named=XJTUdarkred]{structure}
-
 \setbeamerfont{section in head/foot}{size=\tiny,series=\bfseries}
-
-\setbeamercolor{section in head/foot}{fg=XJTUyellow}
 \setbeamerfont{frametitle}{size=\Large}
 
-\setbeamertemplate{blocks}[rounded][shadow=true]
+\usebackgroundtemplate{\pgfuseimage{background}}
 
 \setbeamertemplate{headline}
 {
@@ -77,12 +70,12 @@
 \setbeamertemplate{frametitle}
 {
   \ifx\insertframesubtitle\@empty
-    \vskip-.67\beamer@headheight
-    \hskip.7cm\usebeamerfont*{frametitle}\textbf{\insertframetitle}
+    \vskip-.7\beamer@headheight
+    \hskip1.2em\usebeamerfont*{frametitle}\textbf{\insertframetitle}
   \else
-    \vskip-.87\beamer@headheight
-    \hskip.7cm\usebeamerfont*{frametitle}\textbf{\insertframetitle}\\[-2pt]
-    \hskip.75cm\usebeamerfont*{framesubtitle}\textbf{\insertframesubtitle}
+    \vskip-.9\beamer@headheight
+    \hskip1.2em\usebeamerfont*{frametitle}\textbf{\insertframetitle}\\[-2pt]
+    \hskip1.25em\usebeamerfont*{framesubtitle}\textbf{\insertframesubtitle}
   \fi
 }
 
@@ -92,8 +85,8 @@
   \framelatex{
   \begin{beamercolorbox}[leftskip=.3cm,wd=\paperwidth,ht=0.28\beamer@headheight,sep=0.1cm]{Location bar}
     \usebeamerfont{section in head/foot}%
-    \insertshortauthor~$\cdot$~\insertshorttitle
+    \insertauthor~$\cdot$~\inserttitle
     \hfill
-    \insertframenumber/\inserttotalframenumber
+    \insertframenumber{} / \inserttotalframenumber
   \end{beamercolorbox}}
 }
