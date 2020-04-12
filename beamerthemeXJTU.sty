@@ -24,14 +24,26 @@
 
 \ProvidesPackage{beamerthemeXJTU}
 
+\newif\if@blue
+\@bluefalse
+\DeclareOption{blue}{\@bluetrue}
+\ProcessOptions
+
 \RequirePackage{cncolours}
 
 \usetheme{Rochester}
 \useinnertheme{circles}
-\usecolortheme[named=酡红]{structure}
+\if@blue
+  \definecolor{西交蓝}{HTML}{005699}
+  \usecolortheme[named=西交蓝]{structure}
+  \def\headerimage{inc/XJTU-header-blue.png}
+\else
+  \usecolortheme[named=酡红]{structure}
+  \def\headerimage{inc/XJTU-header.png}
+\fi
 
 \RequirePackage{pgf}
-\pgfdeclareimage[width=\paperwidth,height=.13\paperwidth]{XJTU-header}{inc/XJTU-header}
+\pgfdeclareimage[width=\paperwidth,height=.13\paperwidth]{XJTU-header}{\headerimage}
 \pgfdeclareimage[width=\paperwidth,height=\paperheight]{background}{inc/background}
 
 \setbeamertemplate{navigation symbols}{}
@@ -41,19 +53,35 @@
 \beamer@headheight=.13\paperwidth
 
 \setbeamerfont*{title}{series=\bfseries,size=\Huge}
-\setbeamercolor*{title}{fg=鸭黄,bg=酡红}
-\setbeamercolor*{Title bar}{fg=鸭黄,bg=酡红}
-\setbeamercolor*{Location bar}{fg=鸭黄,bg=酡红}
-\setbeamercolor*{frametitle}{parent=Title bar}
-\setbeamercolor*{block title}{bg=酡红,fg=象牙白}
-\setbeamercolor*{block body}{bg=鱼肚白,fg=黑色}
-\setbeamercolor*{block title example}{bg=粉红,fg=乌黑}
-\setbeamercolor*{block body example}{bg=鱼肚白,fg=黑色}
-\setbeamercolor*{block title alerted}{bg=鹅黄,fg=大红}
-\setbeamercolor*{block body alerted}{bg=鸭黄,fg=酡红}
+\if@blue
+  \setbeamercolor*{title}{fg=荼白,bg=西交蓝}
+  \setbeamercolor*{Title bar}{fg=雪白,bg=藏青}
+  \setbeamercolor*{Location bar}{fg=雪白,bg=藏青}
+  \setbeamercolor*{frametitle}{parent=Title bar}
+  \setbeamercolor*{block title}{bg=藏青,fg=铅白}
+  \setbeamercolor*{block body}{bg=霜色,fg=玄青}
+  \setbeamercolor*{block title example}{bg=苍白,fg=正青}
+  \setbeamercolor*{block body example}{bg=莹白,fg=墨色}
+  \setbeamercolor*{block title alerted}{bg=酡红,fg=象牙白}
+  \setbeamercolor*{block body alerted}{bg=鱼肚白,fg=赤}
+  \setbeamercolor*{example text}{fg=群青}
+  \setbeamercolor{section in head/foot}{fg=素}
+\else
+  \setbeamercolor*{title}{fg=鸭黄,bg=酡红}
+  \setbeamercolor*{Title bar}{fg=鸭黄,bg=酡红}
+  \setbeamercolor*{Location bar}{fg=鸭黄,bg=酡红}
+  \setbeamercolor*{frametitle}{parent=Title bar}
+  \setbeamercolor*{block title}{bg=酡红,fg=象牙白}
+  \setbeamercolor*{block body}{bg=鱼肚白,fg=黑色}
+  \setbeamercolor*{block title example}{bg=粉红,fg=乌黑}
+  \setbeamercolor*{block body example}{bg=鱼肚白,fg=黑色}
+  \setbeamercolor*{block title alerted}{bg=鹅黄,fg=大红}
+  \setbeamercolor*{block body alerted}{bg=鸭黄,fg=酡红}
+  \setbeamercolor{example text}{fg=茜色}
+  \setbeamercolor{section in head/foot}{fg=鸭黄}
+\fi
 \setbeamercolor*{normal text}{fg=黑色,bg=铅白}
-\setbeamercolor{example text}{fg=茜色}
-\setbeamercolor{section in head/foot}{fg=鸭黄}
+
 
 \setbeamerfont{block title}{series=\bfseries}
 \setbeamerfont{section in head/foot}{size=\tiny,series=\bfseries}
